@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ns0:temperatureCelsiusToFahrenheitResponseMessage xmlns:common="saibot.airport/data/common" xmlns:ns0="saibot.airport/services/utility/conversion" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="saibot.airport/services/utility/conversion file:/C:/Users/ninckblokje/dev/sources/SOASuite12cHandbook/ConversionServices/TemperatureConversionService/Schemas/TemperatureConversionService.xsd">
+   <ns0:temperature>33.8</ns0:temperature>
+</ns0:temperatureCelsiusToFahrenheitResponseMessage>
