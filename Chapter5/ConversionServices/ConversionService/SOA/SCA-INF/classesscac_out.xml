@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Faults>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>Mediators/ConversionMediator.mplan</file>
+      <name>Mediators/ConversionMediator.mplan</name>
+      <fix/>
+      <msg>Operation\Event "getDistanceMileToMeter" does not contain case. No operation\event will be executed\processed respectively.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>Mediators/ConversionMediator.mplan</file>
+      <name>Mediators/ConversionMediator.mplan</name>
+      <fix/>
+      <msg>Operation\Event "getWeightLbToKilogram" does not contain case. No operation\event will be executed\processed respectively.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>Mediators/ConversionMediator.mplan</file>
+      <name>Mediators/ConversionMediator.mplan</name>
+      <fix/>
+      <msg>Operation\Event "getSpeedKnotToKMph" does not contain case. No operation\event will be executed\processed respectively.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LengthConversionService']</loc>
+      <line>55</line>
+      <col>17</col>
+      <file>C:\Users\ninckblokje\dev\sources\SOASuite12cHandbook\Chapter5\ConversionServices\ConversionService\SOA\composite.xml</file>
+      <name>C:\Users\ninckblokje\dev\sources\SOASuite12cHandbook\Chapter5\ConversionServices\ConversionService\SOA\composite.xml</name>
+      <fix/>
+      <msg>Schema validation failed with exception "null"</msg>
+   </Fault>
+</Faults>
