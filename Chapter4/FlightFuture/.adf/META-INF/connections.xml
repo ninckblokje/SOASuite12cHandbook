@@ -1,0 +1,27 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="sailbot at XE" className="oracle.jdeveloper.db.adapter.DatabaseProvider"
+             credentialStoreKey="sailbot at XE" xmlns="">
+    <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+    <RefAddresses>
+      <StringRefAddr addrType="oraDriverType">
+        <Contents>thin</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="hostname">
+        <Contents>192.168.99.100</Contents>
+      </StringRefAddr>
+      <SecureRefAddr addrType="password"/>
+      <StringRefAddr addrType="subtype">
+        <Contents>oraJDBC</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="port">
+        <Contents>1521</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="user">
+        <Contents>sailbot</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="sid">
+        <Contents>XE</Contents>
+      </StringRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

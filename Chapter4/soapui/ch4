@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="db19f6b7-59ea-41af-9166-9cacb723a197" activeEnvironment="Default" name="Project 1" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="62ec4df6-7e0e-4e2e-a8b2-9ec4982f6e06" wsaVersion="NONE" name="CountryServicePortTypeSOAP11Binding" type="wsdl" bindingName="{saibot.airport/services/utility/reference}CountryServicePortTypeSOAP11Binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:7101/reference/CountryService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:7101/reference/CountryService?wsdl"><con:part><con:url>http://localhost:7101/reference/CountryService?wsdl</con:url><con:content><![CDATA[<WL5G3N0:definitions targetNamespace="saibot.airport/services/utility/reference" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="saibot.airport/services/utility/reference" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema elementFormDefault="qualified" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:reference="saibot.airport/services/utility/reference" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="saibot.airport/services/utility/reference" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="saibot.airport/services/utility/reference" schemaLocation="http://localhost:7101/reference/CountryService?SCHEMA%2FCountryService%2FSchemas%2FCountryService"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="createCountryRequestMessage">
+    <WL5G3N0:part element="WL5G3N1:createCountryRequestMessage" name="in"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="createCountryResponseMessage">
+    <WL5G3N0:part element="WL5G3N1:createCountryResponseMessage" name="return"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCountryDetailsRequestMessage">
+    <WL5G3N0:part element="WL5G3N1:getCountryDetailsRequestMessage" name="in"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCountryDetailsResponseMessage">
+    <WL5G3N0:part element="WL5G3N1:getCountryDetailsResponseMessage" name="return"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="findCountriesRequestMessage">
+    <WL5G3N0:part element="WL5G3N1:findCountriesRequestMessage" name="in"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="findCountriesResponseMessage">
+    <WL5G3N0:part element="WL5G3N1:findCountriesResponseMessage" name="return"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="CountryServicePortType">
+    <WL5G3N0:operation name="getCountryDetails">
+      <WL5G3N0:input message="WL5G3N1:getCountryDetailsRequestMessage"/>
+      <WL5G3N0:output message="WL5G3N1:getCountryDetailsResponseMessage"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="findCountries">
+      <WL5G3N0:input message="WL5G3N1:findCountriesRequestMessage"/>
+      <WL5G3N0:output message="WL5G3N1:findCountriesResponseMessage"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="createCountry">
+      <WL5G3N0:input message="WL5G3N1:createCountryRequestMessage"/>
+      <WL5G3N0:output message="WL5G3N1:createCountryResponseMessage"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="CountryServicePortTypeSOAP11Binding" type="WL5G3N1:CountryServicePortType">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="getCountryDetails">
+      <WL5G3N2:operation soapAction="saibot.airport/services/utility/reference/getCountryDetails" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="in" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body parts="return" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="findCountries">
+      <WL5G3N2:operation soapAction="saibot.airport/services/utility/reference/findCountries" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="in" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body parts="return" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="createCountry">
+      <WL5G3N2:operation soapAction="saibot.airport/services/utility/reference/createCountry" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="in" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body parts="return" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="CountryServicePortTypeSOAP11BindingQSService">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port binding="WL5G3N1:CountryServicePortTypeSOAP11Binding" name="CountryServicePortTypeSOAP11BindingQSPort">
+      <WL5G3N2:address location="http://localhost:7101/reference/CountryService"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:7101/reference/CountryService?SCHEMA%2FCountryService%2FSchemas%2FCountryService</con:url><con:content><![CDATA[<xsd:schema targetNamespace="saibot.airport/services/utility/reference" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:common="saibot.airport/data/common" xmlns:refMsg="saibot.airport/services/utility/reference" xmlns:refData="saibot.airport/data/reference">
+  <xsd:import namespace="saibot.airport/data/common" schemaLocation="http://localhost:7101/reference/CountryService?SCHEMA%2FCountryService%2FSchemas%2Fcommon"/>
+  <xsd:import namespace="saibot.airport/data/reference" schemaLocation="http://localhost:7101/reference/CountryService?SCHEMA%2FCountryService%2FSchemas%2Freference"/>
+  <xsd:element name="createCountryRequestMessage" type="refMsg:createCountryRequestType"/>
+  <xsd:element name="createCountryResponseMessage" type="refMsg:createCountryResponseType"/>
+  <xsd:element name="findCountriesRequestMessage" type="refMsg:findCountriesRequestType"/>
+  <xsd:element name="findCountriesResponseMessage" type="refMsg:findCountriesResponseType"/>
+  <xsd:element name="getCountryDetailsRequestMessage" type="refMsg:getCountryDetailsRequestType"/>
+  <xsd:element name="getCountryDetailsResponseMessage" type="refMsg:getCountryDetailsResponseType"/>
+  <xsd:complexType name="findCountriesRequestType">
+    <xsd:sequence>
+      <xsd:element name="code" nillable="false" type="common:alpha2Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="name" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="tailcode" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="continent" nillable="false" type="common:alpha2Type" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="findCountriesResponseType">
+    <xsd:sequence>
+      <xsd:element name="Countries" minOccurs="1" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Country" nillable="false" type="refData:countryType" minOccurs="1" maxOccurs="1"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getCountryDetailsRequestType">
+    <xsd:sequence>
+      <xsd:element name="code" nillable="false" type="common:alpha2Type" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getCountryDetailsResponseType">
+    <xsd:sequence>
+      <xsd:sequence>
+        <xsd:element name="Country" nillable="false" type="refData:countryType" minOccurs="1" maxOccurs="1"/>
+      </xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="createCountryRequestType">
+    <xsd:sequence>
+      <xsd:element name="NewCountry" nillable="false" type="refData:countryType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="createCountryResponseType">
+    <xsd:sequence>
+      <xsd:element name="resultCode" nillable="false" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:7101/reference/CountryService?SCHEMA%2FCountryService%2FSchemas%2Fcommon</con:url><con:content><![CDATA[<xsd:schema targetNamespace="saibot.airport/data/common" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:common="saibot.airport/data/common">
+  <xsd:simpleType name="baseCelsiusTemperatureType">
+    <xsd:restriction base="xsd:float">
+      <xsd:minInclusive value="-273.15"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="baseFahrenheitTemperatureType">
+    <xsd:restriction base="xsd:float">
+      <xsd:minInclusive value="-459.67"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="alpha2Type">
+    <xsd:annotation>
+      <xsd:documentation>2-char uppercase strings only</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="2"/>
+      <xsd:pattern value="[A-Z]{2}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="alpha3Type">
+    <xsd:annotation>
+      <xsd:documentation>3-char uppercase strings only</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="3"/>
+      <xsd:pattern value="[A-Z]{3}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="alphaNumeric4Type">
+    <xsd:annotation>
+      <xsd:documentation>4-char strings only</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="4"/>
+      <xsd:pattern value="[0-9A-Z]{4}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="countryCodeType">
+    <xsd:annotation>
+      <xsd:documentation>the code is the unique two letter ISO 3166-1 indication for a country - see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 and http://www.iso.org/iso/home/standards/country_codes.htm</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="common:alpha2Type"></xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="iataAirportType">
+    <xsd:annotation>
+      <xsd:documentation>the code is the three letter IATA identification for airports; see for example http://www.world-airport-codes.com/ and http://www.iata.org/publications/Pages/code-search.aspx</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="common:alpha3Type"></xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="iataAirlineType">
+    <xsd:annotation>
+      <xsd:documentation>the code is the two letter IATA identification for airlines (carriers); see for example http://www.iata.org/publications/Pages/code-search.aspx; http://en.wikipedia.org/wiki/Airline_codes-All</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="common:alpha2Type"></xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="iacoCodeType">
+    <xsd:annotation>
+      <xsd:documentation>4-char strings only</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="4"/>
+      <xsd:pattern value="[0-9A-Z]{4}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="iataEquipmentCodeType">
+    <xsd:annotation>
+      <xsd:documentation>strings with numbers and captials only; see for example
+                         http://www.flugzeuginfo.net/table_accodes_iata_en.php</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="3"/>
+      <xsd:pattern value="[0-9A-Z]{4}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="timezoneOffsetType">
+    <xsd:annotation>
+      <xsd:documentation>an offset (in hours) versus UTC</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:float">
+      <xsd:maxInclusive value="12"/>
+      <xsd:minInclusive value="-12"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="geoLocationType">
+    <xsd:sequence>
+      <xsd:element name="latitude" nillable="false" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="longitude" nillable="false" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="elevation" nillable="false" type="xsd:double" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="distanceType">
+    <xsd:annotation>
+      <xsd:documentation>a distance in some unspecified unit</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:double">
+      <xsd:minInclusive value="0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="flightNumberType">
+    <xsd:annotation>
+      <xsd:documentation>A flight number. Flight numbers are integer values
+                         within the range of [0-9999]. Example: 1234</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="9999"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="hourOfDayType">
+    <xsd:annotation>
+      <xsd:documentation>An hour during the day: 0-23</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="23"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="fiveMinuteBlockType">
+    <xsd:annotation>
+      <xsd:documentation>A five minute block within one clock hour: 0(-5), 5(-10), 10()-15)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="55"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="yesNoType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Yes"/>
+      <xsd:enumeration value="No"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="periodType">
+    <xsd:sequence>
+      <xsd:element name="season" nillable="false" type="common:seasonType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="year" nillable="false" type="xsd:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="searchMetaType">
+    <xsd:sequence>
+      <xsd:element name="offset" nillable="false" type="xsd:nonNegativeInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="numberOfResults" nillable="false" type="xsd:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="sortBy" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="flightStatusType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Active"/>
+      <xsd:enumeration value="Suspended"/>
+      <xsd:enumeration value="Open"/>
+      <xsd:enumeration value="Closed"/>
+      <xsd:enumeration value="Cancelled"/>
+      <xsd:enumeration value="Diverted"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="flightActionType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="EnRoute"/>
+      <xsd:enumeration value="FinalApproach"/>
+      <xsd:enumeration value="Taxiing"/>
+      <xsd:enumeration value="AtGate"/>
+      <xsd:enumeration value="BagageOnBelt"/>
+      <xsd:enumeration value="Prepare"/>
+      <xsd:enumeration value="GateOpen"/>
+      <xsd:enumeration value="GateClosing"/>
+      <xsd:enumeration value="GateClosed"/>
+      <xsd:enumeration value="Other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="seasonType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="S"/>
+      <xsd:enumeration value="W"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="arrivalOrDepartureType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="A"/>
+      <xsd:enumeration value="D"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="weekDayType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Monday"/>
+      <xsd:enumeration value="Tuesday"/>
+      <xsd:enumeration value="Wednesday"/>
+      <xsd:enumeration value="Thursday"/>
+      <xsd:enumeration value="Friday"/>
+      <xsd:enumeration value="Saturday"/>
+      <xsd:enumeration value="Sunday"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:7101/reference/CountryService?SCHEMA%2FCountryService%2FSchemas%2Freference</con:url><con:content><![CDATA[<xsd:schema targetNamespace="saibot.airport/data/reference" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:reference="saibot.airport/data/reference" xmlns:common="saibot.airport/data/common">
+  <xsd:import namespace="saibot.airport/data/common" schemaLocation="http://localhost:7101/reference/CountryService?SCHEMA%2FCountryService%2FSchemas%2Fcommon"/>
+  <xsd:complexType name="countryType">
+    <xsd:sequence>
+      <!--the code is the unique two letter ISO 3166-1 indication for a country - see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 and http://www.iso.org/iso/home/standards/country_codes.htm-->
+      <xsd:element name="code" nillable="false" type="common:alpha2Type" minOccurs="0" maxOccurs="1"/>
+      <!--the name is the common name, used to present the country to humans-->
+      <xsd:element name="name" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <!--see see http://www.flugzeuginfo.net/table_tailcodes_country_en.php-->
+      <xsd:element name="tailcode" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Flag" type="xsd:base64Binary" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="aircarrierType">
+    <xsd:sequence>
+      <xsd:element name="IATACode" nillable="false" type="common:alpha2Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PAXCode" nillable="false" type="xsd:positiveInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ICAOCode" nillable="false" type="common:alphaNumeric4Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Name" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Country" type="reference:countryType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Logo" type="xsd:base64Binary" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="airportType">
+    <xsd:sequence>
+      <xsd:element name="IATACode" nillable="false" type="common:iataAirportType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ICAOCode" nillable="false" type="common:iacoCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Name" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Country" type="reference:countryType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="City" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="GeoLocation" type="common:geoLocationType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="UTCOffset" type="common:timezoneOffsetType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="weatherReportType">
+    <xsd:sequence>
+      <!--based on METAR - see http://weather.cod.edu/notes/metar.html ; http://en.wikipedia.org/wiki/METAR-->
+      <!--knots-->
+      <xsd:element name="WindSpeed" nillable="false" type="xsd:positiveInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="WindDirection" nillable="false" type="xsd:positiveInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="DewPointTemperature" nillable="false" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="CurrentTemperature" nillable="false" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Pressure" type="reference:countryType" minOccurs="0" maxOccurs="1"/>
+      <!--Clear, Not significant, few, Scattered, Broken,  Overcast,-->
+      <xsd:element name="SkyCondition" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Visibility" type="xsd:positiveInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Precipitation" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Obscuration" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="aircraftModelType">
+    <xsd:sequence>
+      <xsd:element name="IATACode" nillable="false" type="common:iataEquipmentCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="IACOCode" nillable="false" type="common:iacoCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Manufacturer" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Model" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="WakeCategory" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PassengerCapacity" nillable="false" type="xsd:positiveInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="RangeInKilometers" nillable="false" minOccurs="0" maxOccurs="1" type="xsd:positiveInteger"/>
+      <xsd:element name="CruiseSpeedInKilolmetersPerHour" nillable="false" minOccurs="0" maxOccurs="1" type="xsd:positiveInteger"/>
+      <xsd:element name="LengthInMeters" nillable="false" minOccurs="0" maxOccurs="1" type="xsd:positiveInteger"/>
+      <xsd:element name="HeightInMeters" nillable="false" minOccurs="0" maxOccurs="1" type="xsd:positiveInteger"/>
+      <xsd:element name="WingSpanInMeters" nillable="false" minOccurs="0" maxOccurs="1" type="xsd:positiveInteger"/>
+      <xsd:element name="MaximumTakeOffWeightInKilogram" nillable="false" minOccurs="0" maxOccurs="1" type="xsd:positiveInteger"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="aircraftType">
+    <xsd:sequence>
+      <xsd:element name="aircraftModel" nillable="false" type="reference:aircraftModelType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Registration" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="LaunchDate" nillable="false" type="xsd:date" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="gateLocationType">
+    <xsd:sequence>
+      <xsd:element name="Terminal" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Pier" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Gate" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="timePlanningUnitType">
+    <xsd:sequence>
+      <xsd:element name="startDate" nillable="false" type="xsd:date" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="endDate" nillable="true" type="xsd:date" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="DaysOfWeek" minOccurs="0" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="day" nillable="false" minOccurs="0" maxOccurs="7" type="common:weekDayType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="HourOfDay" nillable="false" type="common:hourOfDayType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="FiveMinuteBlock" nillable="false" type="common:fiveMinuteBlockType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:7101/reference/CountryService</con:endpoint></con:endpoints><con:operation id="7e9b29fa-cfe1-4899-b50f-de81e560e937" isOneWay="false" action="saibot.airport/services/utility/reference/createCountry" name="createCountry" bindingOperationName="createCountry" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9382e736-63da-495b-8b1e-21314f2b644e" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/reference/CountryService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ref="saibot.airport/services/utility/reference" xmlns:ref1="saibot.airport/data/reference">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ref:createCountryRequestMessage>\r
+         <ref:NewCountry>\r
+            <!--Optional:-->\r
+            <ref1:code>?</ref1:code>\r
+            <!--Optional:-->\r
+            <ref1:name>?</ref1:name>\r
+            <!--Optional:-->\r
+            <ref1:tailcode>?</ref1:tailcode>\r
+            <!--Optional:-->\r
+            <ref1:Flag>R0lGODlh9AH6APcAAOsgHPvwAuooI6+pC0K3Qu0dHSckKACmTwCoSv7xBe0cKv7uACYhG/7tCw+aSCMfIP3rFgCnVO4aJsG+CCUcFIDLJgCpUJWMCvAZKHRqDPTyAQCmUv7zEsrGxefnB/EaIv/5APbrAPntAEGBPsbFArPPy1RIC/gVOGdaCffuIks7ERaVPP7ZAefjFu32Af/6DNcoJfj0AP7jAfzzAP/xCTeFRP/9APREJhwZIxsYFP/wDcY2NP/0BoN6EcnHyMzIvP/uBf/1Cf/0AsfCG//0APhxF9rTBf/1D8zMIbKpICAeK8TKyP/wAOXYGB4hFf/XE/76EyIbNnTSItMoBgmhUcnIxvH/APzwACYhCgCoU/7xGdnXG0x2Rvr9AACmWPUWI//3AAClUQClSv/jCQemVvnoAZ+bEf7qAfz1ANzhDf8SKfPlAAakTQCwTuUqP+HbCTkoHc7GGAWmY//5Bfj4AMHK39woNL63H/TyE/LzCOMhIx8iIwCrUP/wAlpTKDUlCfrtBwKoVvRvK/HsDOtTFgCoWeYcKWtvO+cRLf/+BZOIIvfwBgelUdXNCd0VL/75HgaiT/n0BCcgOfeDFACqTgi2RcjHzCgcIecYIgSmW//yAvPlE/7pBvQYKwCuSLc2LvnzCcwzLj4yBigdLPrqCcvLywCqUwClU8LMvz81GgOmQdXEwvj2BwKjVbu7AsPGxPj2DvzwBCAVH/f1HCAWLTAdI7/G0e0VI/X6Hfn5BmVXHAKgTQShXP/EHgCsVvv3AA2kWDIlMv/2A/b9DvzzAicUI80vKgyiUAGiUPgTKOEbFfz2AwmgWASoUhsNJQOlUACjXAOlUwOnUO4MIwShUPkYHgCnTwSkSsM4RP/zBZ6UHhKeUdbhK9/XK+TdRLu+qc3AxILJH/YeLgeoXQKoUwKqUwCgW+fB5sDewoi1TNXG3Ud/Qe/yFysTMx8qAikqFSaQWAakVuwSNdDSxfoRP/8OLfn/ARagYM3NFAqoXsjEys7CzwqdQe0bJP7yAACmUCH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InV1aWQ6NUQyMDg5MjQ5M0JGREIxMTkxNEE4NTkwRDMxNTA4QzgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkU1NDJBOUUxNjM2MTFFMzkwMjNDMjgzQ0U3N0I5RUIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkU1NDJBOUQxNjM2MTFFMzkwMjNDMjgzQ0U3N0I5RUIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgSWxsdXN0cmF0b3IgQ1M1LjEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NjhFMEQ0RDk4QUIxMUUyQTNBM0JCNzlBNkM4OTYyQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NjhFMEQ0RTk4QUIxMUUyQTNBM0JCNzlBNkM4OTYyQSIvPiA8ZGM6dGl0bGU+IDxyZGY6QWx0PiA8cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPnRwLWxnZmxhZzwvcmRmOmxpPiA8L3JkZjpBbHQ+IDwvZGM6dGl0bGU+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj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</ref1:Flag>\r
+         </ref:NewCountry>\r
+      </ref:createCountryRequestMessage>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="saibot.airport/services/utility/reference/createCountry"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="2966fe70-763f-45b2-bf05-eb3501def632" isOneWay="false" action="saibot.airport/services/utility/reference/findCountries" name="findCountries" bindingOperationName="findCountries" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation><con:operation id="87d46664-274b-4750-a0f1-3d67c91b84d4" isOneWay="false" action="saibot.airport/services/utility/reference/getCountryDetails" name="getCountryDetails" bindingOperationName="getCountryDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="06d00dda-e0f4-4963-af40-448d8abb8171" wsaVersion="NONE" name="FlightReportServicePortTypeSOAP11Binding" type="wsdl" bindingName="{saibot.airport/services/flightreport}FlightReportServicePortTypeSOAP11Binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:7101/flight/FlightReportService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:7101/flight/FlightReportService?wsdl"><con:part><con:url>http://localhost:7101/flight/FlightReportService?wsdl</con:url><con:content><![CDATA[<WL5G3N0:definitions targetNamespace="saibot.airport/services/flightreport" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="saibot.airport/services/flightreport" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema elementFormDefault="qualified" xmlns:flightreport="saibot.airport/services/flightreport" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:reference="saibot.airport/datareference" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="saibot.airport/services/flightreport" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="saibot.airport/services/flightreport" schemaLocation="http://localhost:7101/flight/FlightReportService?SCHEMA%2FFlightReportService%2FSchemas%2FFlightReportService"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="reportFlightStatusUpdateRequestMessage">
+    <WL5G3N0:part element="WL5G3N1:reportFlightStatusUpdateRequestMessage" name="in"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="reportFlightStatusUpdateResponseMessage">
+    <WL5G3N0:part element="WL5G3N1:reportFlightStatusUpdateResponseMessage" name="return"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getFlightReportRequestMessage">
+    <WL5G3N0:part element="WL5G3N1:getFlightReportRequestMessage" name="in"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getFlightReportResponseMessage">
+    <WL5G3N0:part element="WL5G3N1:getFlightReportResponseMessage" name="return"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="FlightReportServicePortType">
+    <WL5G3N0:operation name="reportFlightStatusUpdate">
+      <WL5G3N0:input message="WL5G3N1:reportFlightStatusUpdateRequestMessage"/>
+      <WL5G3N0:output message="WL5G3N1:reportFlightStatusUpdateResponseMessage"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getFlightReport">
+      <WL5G3N0:input message="WL5G3N1:getFlightReportRequestMessage"/>
+      <WL5G3N0:output message="WL5G3N1:getFlightReportResponseMessage"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="FlightReportServicePortTypeSOAP11Binding" type="WL5G3N1:FlightReportServicePortType">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="reportFlightStatusUpdate">
+      <WL5G3N2:operation soapAction="saibot.airport/services/flightreport/reportFlightStatusUpdate" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="in" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body parts="return" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getFlightReport">
+      <WL5G3N2:operation soapAction="saibot.airport/services/flightreport/getFlightReport" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="in" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body parts="return" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="FlightReportServicePortTypeSOAP11BindingQSService">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port binding="WL5G3N1:FlightReportServicePortTypeSOAP11Binding" name="FlightReportServicePortTypeSOAP11BindingQSPort">
+      <WL5G3N2:address location="http://localhost:7101/flight/FlightReportService"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:7101/flight/FlightReportService?SCHEMA%2FFlightReportService%2FSchemas%2FFlightReportService</con:url><con:content><![CDATA[<xsd:schema targetNamespace="saibot.airport/services/flightreport" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:common="saibot.airport/data/common" xmlns:flightreport="saibot.airport/services/flightreport" xmlns:flight="saibot.airport/data/flight" xmlns:reference="saibot.airport/data/reference">
+  <xsd:import namespace="saibot.airport/data/common" schemaLocation="http://localhost:7101/flight/FlightReportService?SCHEMA%2FFlightReportService%2FSchemas%2Fcommon"/>
+  <xsd:import namespace="saibot.airport/data/flight" schemaLocation="http://localhost:7101/flight/FlightReportService?SCHEMA%2FFlightReportService%2FSchemas%2Fflight"/>
+  <xsd:import namespace="saibot.airport/data/reference" schemaLocation="http://localhost:7101/flight/FlightReportService?SCHEMA%2FFlightReportService%2FSchemas%2Freference"/>
+  <xsd:element name="reportFlightStatusUpdateRequestMessage" type="flightreport:reportFlightStatusUpdateRequestType"/>
+  <xsd:element name="reportFlightStatusUpdateResponseMessage" type="flightreport:reportFlightStatusUpdateResponseType"/>
+  <xsd:element name="getFlightReportRequestMessage" type="flightreport:getFlightReportRequestType"/>
+  <xsd:element name="getFlightReportResponseMessage" type="flightreport:getFlightReportResponseType"/>
+  <xsd:complexType name="getFlightReportRequestType">
+    <xsd:sequence>
+      <xsd:element name="FlightDate" nillable="false" type="xsd:date" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Carrier" nillable="false" type="common:iataAirlineType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="FlightNumber" nillable="false" type="common:flightNumberType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getFlightReportResponseType">
+    <xsd:sequence>
+      <xsd:element name="FlightLog" minOccurs="1" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="FlightLogEntry" type="flightreport:flightLogEventType" minOccurs="1" maxOccurs="1"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="reportFlightStatusUpdateRequestType">
+    <xsd:sequence>
+      <xsd:element name="flightStatusEvent" type="flightreport:flightLogEventType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="reporter" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="reportFlightStatusUpdateResponseType">
+    <xsd:sequence>
+      <xsd:element name="Result" nillable="false" type="xsd:nonNegativeInteger" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="flightLogEventType">
+    <xsd:sequence>
+      <xsd:element name="EventTimestamp" nillable="false" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Carrier" nillable="false" type="common:iataAirlineType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="FlightNumber" nillable="false" type="common:flightNumberType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="FlightDate" nillable="false" type="xsd:date" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="FlightStatus" nillable="false" type="flight:flightStatusType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Remarks" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:7101/flight/FlightReportService?SCHEMA%2FFlightReportService%2FSchemas%2Fcommon</con:url><con:content><![CDATA[<xsd:schema targetNamespace="saibot.airport/data/common" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:common="saibot.airport/data/common">
+  <xsd:simpleType name="baseCelsiusTemperatureType">
+    <xsd:restriction base="xsd:float">
+      <xsd:minInclusive value="-273.15"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="baseFahrenheitTemperatureType">
+    <xsd:restriction base="xsd:float">
+      <xsd:minInclusive value="-459.67"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="alpha2Type">
+    <xsd:annotation>
+      <xsd:documentation>2-char uppercase strings only</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="2"/>
+      <xsd:pattern value="[A-Z]{2}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="alpha3Type">
+    <xsd:annotation>
+      <xsd:documentation>3-char uppercase strings only</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="3"/>
+      <xsd:pattern value="[A-Z]{3}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="alphaNumeric4Type">
+    <xsd:annotation>
+      <xsd:documentation>4-char strings only</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="4"/>
+      <xsd:pattern value="[0-9A-Z]{4}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="countryCodeType">
+    <xsd:annotation>
+      <xsd:documentation>the code is the unique two letter ISO 3166-1 indication for a country - see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 and http://www.iso.org/iso/home/standards/country_codes.htm</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="common:alpha2Type"></xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="iataAirportType">
+    <xsd:annotation>
+      <xsd:documentation>the code is the three letter IATA identification for airports; see for example http://www.world-airport-codes.com/ and http://www.iata.org/publications/Pages/code-search.aspx</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="common:alpha3Type"></xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="iataAirlineType">
+    <xsd:annotation>
+      <xsd:documentation>the code is the two letter IATA identification for airlines (carriers); see for example http://www.iata.org/publications/Pages/code-search.aspx; http://en.wikipedia.org/wiki/Airline_codes-All</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="common:alpha2Type"></xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="iacoCodeType">
+    <xsd:annotation>
+      <xsd:documentation>4-char strings only</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="4"/>
+      <xsd:pattern value="[0-9A-Z]{4}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="iataEquipmentCodeType">
+    <xsd:annotation>
+      <xsd:documentation>strings with numbers and capitals only; see for example
+                         http://www.flugzeuginfo.net/table_accodes_iata_en.php</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="3"/>
+      <xsd:pattern value="[0-9A-Z]{3}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="timezoneOffsetType">
+    <xsd:annotation>
+      <xsd:documentation>an offset (in hours) versus UTC</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:float">
+      <xsd:maxInclusive value="12"/>
+      <xsd:minInclusive value="-12"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="geoLocationType">
+    <xsd:sequence>
+      <xsd:element name="latitude" nillable="false" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="longitude" nillable="false" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="elevation" nillable="false" type="xsd:double" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="distanceType">
+    <xsd:annotation>
+      <xsd:documentation>a distance in some unspecified unit</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:double">
+      <xsd:minInclusive value="0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="flightNumberType">
+    <xsd:annotation>
+      <xsd:documentation>A flight number. Flight numbers are integer values
+                         within the range of [0-9999]. Example: 1234</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="9999"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="hourOfDayType">
+    <xsd:annotation>
+      <xsd:documentation>An hour during the day: 0-23</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="23"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="fiveMinuteBlockType">
+    <xsd:annotation>
+      <xsd:documentation>A five minute block within one clock hour: 0(-5), 5(-10), 10()-15)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="55"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="yesNoType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Yes"/>
+      <xsd:enumeration value="No"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="periodType">
+    <xsd:sequence>
+      <xsd:element name="season" nillable="false" type="common:seasonType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="year" nillable="false" type="xsd:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="searchMetaType">
+    <xsd:sequence>
+      <xsd:element name="offset" nillable="false" type="xsd:nonNegativeInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="numberOfResults" nillable="false" type="xsd:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="sortBy" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="flightStatusType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Active"/>
+      <xsd:enumeration value="Suspended"/>
+      <xsd:enumeration value="Open"/>
+      <xsd:enumeration value="Closed"/>
+      <xsd:enumeration value="Cancelled"/>
+      <xsd:enumeration value="Diverted"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="flightActionType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="EnRoute"/>
+      <xsd:enumeration value="FinalApproach"/>
+      <xsd:enumeration value="Taxiing"/>
+      <xsd:enumeration value="AtGate"/>
+      <xsd:enumeration value="BagageOnBelt"/>
+      <xsd:enumeration value="Prepare"/>
+      <xsd:enumeration value="GateOpen"/>
+      <xsd:enumeration value="GateClosing"/>
+      <xsd:enumeration value="GateClosed"/>
+      <xsd:enumeration value="Other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="seasonType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="S"/>
+      <xsd:enumeration value="W"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="arrivalOrDepartureType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="A"/>
+      <xsd:enumeration value="D"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="weekDayType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Monday"/>
+      <xsd:enumeration value="Tuesday"/>
+      <xsd:enumeration value="Wednesday"/>
+      <xsd:enumeration value="Thursday"/>
+      <xsd:enumeration value="Friday"/>
+      <xsd:enumeration value="Saturday"/>
+      <xsd:enumeration value="Sunday"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:7101/flight/FlightReportService?SCHEMA%2FFlightReportService%2FSchemas%2Fflight</con:url><con:content><![CDATA[<xsd:schema targetNamespace="saibot.airport/data/flight" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:common="saibot.airport/data/common" xmlns:reference="saibot.airport/data/reference" xmlns:flight="saibot.airport/data/flight">
+  <xsd:import namespace="saibot.airport/data/common" schemaLocation="http://localhost:7101/flight/FlightReportService?SCHEMA%2FFlightReportService%2FSchemas%2Fcommon"/>
+  <xsd:import namespace="saibot.airport/data/reference" schemaLocation="http://localhost:7101/flight/FlightReportService?SCHEMA%2FFlightReportService%2FSchemas%2Freference"/>
+  <xsd:complexType name="slotType">
+    <xsd:sequence>
+      <xsd:element name="AllocationDate" nillable="false" type="xsd:date" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Carrier" nillable="false" type="reference:aircarrierType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="TimePlanningUnit" nillable="false" type="reference:timePlanningUnitType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ArrivalOrDeparture" nillable="false" type="common:arrivalOrDepartureType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="AircraftModel" nillable="false" type="reference:aircraftModelType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Period" nillable="false" type="common:periodType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="flightType">
+    <xsd:sequence>
+      <xsd:element name="Carrier" nillable="false" type="reference:aircarrierType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="FlightNumber" nillable="false" type="common:flightNumberType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="FlightStatus" nillable="false" type="flight:flightStatusType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ArrivalOrDeparture" nillable="false" type="common:arrivalOrDepartureType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Delayed" nillable="false" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="AircraftModel" nillable="false" type="reference:aircraftModelType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ConnectingFlightNumber" nillable="false" type="common:flightNumberType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ConnectingAirport" nillable="false" type="reference:airportType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="CodeShares" minOccurs="0" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CodeShare" minOccurs="0" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Carrier" nillable="false" type="reference:aircarrierType" minOccurs="1" maxOccurs="1"/>
+                  <xsd:element name="FlightNumber" nillable="false" type="common:flightNumberType" minOccurs="1" maxOccurs="1"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FlightHistory" minOccurs="0" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="FlightUpdate" minOccurs="0" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="UpdateTimestamp" nillable="false" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
+                  <xsd:element name="FlightStatus" nillable="false" type="flight:flightStatusType" minOccurs="1" maxOccurs="1"/>
+                  <xsd:element name="Remarks" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="flightStatusType">
+    <xsd:sequence>
+      <xsd:element name="TimePlanningUnit" nillable="false" type="reference:timePlanningUnitType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Status" nillable="false" type="common:flightStatusType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Action" nillable="false" type="common:flightActionType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="BagageLocation" nillable="false" type="xsd:positiveInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="CheckinCounter" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Runway" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Aircraft" nillable="false" type="reference:aircraftType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="GateLocation" nillable="false" type="reference:gateLocationType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:7101/flight/FlightReportService?SCHEMA%2FFlightReportService%2FSchemas%2Freference</con:url><con:content><![CDATA[<xsd:schema targetNamespace="saibot.airport/data/reference" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:reference="saibot.airport/data/reference" xmlns:common="saibot.airport/data/common">
+  <xsd:import namespace="saibot.airport/data/common" schemaLocation="http://localhost:7101/flight/FlightReportService?SCHEMA%2FFlightReportService%2FSchemas%2Fcommon"/>
+  <xsd:complexType name="countryType">
+    <xsd:sequence>
+      <!--the code is the unique two letter ISO 3166-1 indication for a country - see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 and http://www.iso.org/iso/home/standards/country_codes.htm-->
+      <xsd:element name="code" nillable="false" type="common:alpha2Type" minOccurs="0" maxOccurs="1"/>
+      <!--the name is the common name, used to present the country to humans-->
+      <xsd:element name="name" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <!--see see http://www.flugzeuginfo.net/table_tailcodes_country_en.php-->
+      <xsd:element name="tailcode" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Flag" type="xsd:base64Binary" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="aircarrierType">
+    <xsd:sequence>
+      <xsd:element name="IATACode" nillable="false" type="common:alpha2Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PAXCode" nillable="false" type="xsd:positiveInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ICAOCode" nillable="false" type="common:alphaNumeric4Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Name" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Country" type="reference:countryType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Logo" type="xsd:base64Binary" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="airportType">
+    <xsd:sequence>
+      <xsd:element name="IATACode" nillable="false" type="common:iataAirportType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ICAOCode" nillable="false" type="common:iacoCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Name" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Country" type="reference:countryType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="City" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="GeoLocation" type="common:geoLocationType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="UTCOffset" type="common:timezoneOffsetType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="weatherReportType">
+    <xsd:sequence>
+      <!--based on METAR - see http://weather.cod.edu/notes/metar.html ; http://en.wikipedia.org/wiki/METAR-->
+      <!--knots-->
+      <xsd:element name="WindSpeed" nillable="false" type="xsd:positiveInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="WindDirection" nillable="false" type="xsd:positiveInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="DewPointTemperature" nillable="false" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="CurrentTemperature" nillable="false" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Pressure" type="reference:countryType" minOccurs="0" maxOccurs="1"/>
+      <!--Clear, Not significant, few, Scattered, Broken,  Overcast,-->
+      <xsd:element name="SkyCondition" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Visibility" type="xsd:positiveInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Precipitation" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Obscuration" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="aircraftModelType">
+    <xsd:sequence>
+      <xsd:element name="IATACode" nillable="false" type="common:iataEquipmentCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="IACOCode" nillable="false" type="common:iacoCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Manufacturer" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Model" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="WakeCategory" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PassengerCapacity" nillable="false" type="xsd:positiveInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="RangeInKilometers" nillable="false" minOccurs="0" maxOccurs="1" type="xsd:positiveInteger"/>
+      <xsd:element name="CruiseSpeedInKilolmetersPerHour" nillable="false" minOccurs="0" maxOccurs="1" type="xsd:positiveInteger"/>
+      <xsd:element name="LengthInMeters" nillable="false" minOccurs="0" maxOccurs="1" type="xsd:positiveInteger"/>
+      <xsd:element name="HeightInMeters" nillable="false" minOccurs="0" maxOccurs="1" type="xsd:positiveInteger"/>
+      <xsd:element name="WingSpanInMeters" nillable="false" minOccurs="0" maxOccurs="1" type="xsd:positiveInteger"/>
+      <xsd:element name="MaximumTakeOffWeightInKilogram" nillable="false" minOccurs="0" maxOccurs="1" type="xsd:positiveInteger"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="aircraftType">
+    <xsd:sequence>
+      <xsd:element name="aircraftModel" nillable="false" type="reference:aircraftModelType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Registration" nillable="false" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="LaunchDate" nillable="false" type="xsd:date" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="gateLocationType">
+    <xsd:sequence>
+      <xsd:element name="Terminal" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Pier" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Gate" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="timePlanningUnitType">
+    <xsd:sequence>
+      <xsd:element name="startDate" nillable="false" type="xsd:date" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="endDate" nillable="true" type="xsd:date" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="DaysOfWeek" minOccurs="0" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="day" nillable="false" minOccurs="0" maxOccurs="7" type="common:weekDayType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="HourOfDay" nillable="false" type="common:hourOfDayType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="FiveMinuteBlock" nillable="false" type="common:fiveMinuteBlockType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:7101/flight/FlightReportService</con:endpoint></con:endpoints><con:operation id="0d701cb6-802e-4a0e-b8d3-68b6f0c92892" isOneWay="false" action="saibot.airport/services/flightreport/getFlightReport" name="getFlightReport" bindingOperationName="getFlightReport" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e650ff58-7446-4b7b-99d9-90e128171d97" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/flight/FlightReportService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:flig="saibot.airport/services/flightreport">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <flig:getFlightReportRequestMessage>\r
+         <flig:FlightDate>2008-09-19</flig:FlightDate>\r
+         <flig:Carrier>st</flig:Carrier>\r
+         <flig:FlightNumber>100</flig:FlightNumber>\r
+      </flig:getFlightReportRequestMessage>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="saibot.airport/services/flightreport/getFlightReport"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="5fdcbd7a-a151-4c51-bd7e-3f1c55edd8a5" isOneWay="false" action="saibot.airport/services/flightreport/reportFlightStatusUpdate" name="reportFlightStatusUpdate" bindingOperationName="reportFlightStatusUpdate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="47c92cca-4b68-447f-81de-38ace8eba9dd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/flight/FlightReportService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:flig="saibot.airport/services/flightreport" xmlns:flig1="saibot.airport/data/flight" xmlns:ref="saibot.airport/data/reference">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <flig:reportFlightStatusUpdateRequestMessage>\r
+         <flig:flightStatusEvent>\r
+            <flig:EventTimestamp>?</flig:EventTimestamp>\r
+            <flig:Carrier>?</flig:Carrier>\r
+            <flig:FlightNumber>?</flig:FlightNumber>\r
+            <flig:FlightDate>?</flig:FlightDate>\r
+            <flig:FlightStatus>\r
+               <!--Optional:-->\r
+               <flig1:TimePlanningUnit>\r
+                  <ref:startDate>?</ref:startDate>\r
+                  <!--Optional:-->\r
+                  <ref:endDate>?</ref:endDate>\r
+                  <!--Optional:-->\r
+                  <ref:DaysOfWeek>\r
+                     <!--0 to 7 repetitions:-->\r
+                     <ref:day>?</ref:day>\r
+                  </ref:DaysOfWeek>\r
+                  <!--Optional:-->\r
+                  <ref:HourOfDay>?</ref:HourOfDay>\r
+                  <!--Optional:-->\r
+                  <ref:FiveMinuteBlock>?</ref:FiveMinuteBlock>\r
+               </flig1:TimePlanningUnit>\r
+               <!--Optional:-->\r
+               <flig1:Status>?</flig1:Status>\r
+               <!--Optional:-->\r
+               <flig1:Action>?</flig1:Action>\r
+               <!--Optional:-->\r
+               <flig1:BagageLocation>?</flig1:BagageLocation>\r
+               <!--Optional:-->\r
+               <flig1:CheckinCounter>?</flig1:CheckinCounter>\r
+               <!--Optional:-->\r
+               <flig1:Runway>?</flig1:Runway>\r
+               <!--Optional:-->\r
+               <flig1:Aircraft>\r
+                  <!--Optional:-->\r
+                  <ref:aircraftModel>\r
+                     <!--Optional:-->\r
+                     <ref:IATACode>?</ref:IATACode>\r
+                     <!--Optional:-->\r
+                     <ref:IACOCode>?</ref:IACOCode>\r
+                     <ref:Manufacturer>?</ref:Manufacturer>\r
+                     <ref:Model>?</ref:Model>\r
+                     <ref:WakeCategory>?</ref:WakeCategory>\r
+                     <!--Optional:-->\r
+                     <ref:PassengerCapacity>?</ref:PassengerCapacity>\r
+                     <!--Optional:-->\r
+                     <ref:RangeInKilometers>?</ref:RangeInKilometers>\r
+                     <!--Optional:-->\r
+                     <ref:CruiseSpeedInKilolmetersPerHour>?</ref:CruiseSpeedInKilolmetersPerHour>\r
+                     <!--Optional:-->\r
+                     <ref:LengthInMeters>?</ref:LengthInMeters>\r
+                     <!--Optional:-->\r
+                     <ref:HeightInMeters>?</ref:HeightInMeters>\r
+                     <!--Optional:-->\r
+                     <ref:WingSpanInMeters>?</ref:WingSpanInMeters>\r
+                     <!--Optional:-->\r
+                     <ref:MaximumTakeOffWeightInKilogram>?</ref:MaximumTakeOffWeightInKilogram>\r
+                  </ref:aircraftModel>\r
+                  <ref:Registration>?</ref:Registration>\r
+                  <!--Optional:-->\r
+                  <ref:LaunchDate>?</ref:LaunchDate>\r
+               </flig1:Aircraft>\r
+               <!--Optional:-->\r
+               <flig1:GateLocation>\r
+                  <!--Optional:-->\r
+                  <ref:Terminal>?</ref:Terminal>\r
+                  <!--Optional:-->\r
+                  <ref:Pier>?</ref:Pier>\r
+                  <!--Optional:-->\r
+                  <ref:Gate>?</ref:Gate>\r
+               </flig1:GateLocation>\r
+            </flig:FlightStatus>\r
+            <!--Optional:-->\r
+            <flig:Remarks>?</flig:Remarks>\r
+         </flig:flightStatusEvent>\r
+         <flig:reporter>?</flig:reporter>\r
+      </flig:reportFlightStatusUpdateRequestMessage>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="saibot.airport/services/flightreport/reportFlightStatusUpdate"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
