@@ -1,0 +1,12 @@
+<adapter-config name="FinanceAircraftMovementsReporterJCA" adapter="jms" wsdlLocation="FinanceAircraftMovementsReporterJCA.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory UIConnectionName="IntegratedWebLogicServer" location="eis/Finance/Queue" UIJmsProvider="WLSJMS"/>
+  <endpoint-interaction portType="AircraftMovementServicePortType" operation="reportAircraftMovement">
+    <interaction-spec className="oracle.tip.adapter.jms.outbound.JmsProduceInteractionSpec">
+      <property name="DestinationName" value="jms/finance/AircraftMovementsQueue"/>
+      <property name="DeliveryMode" value="Persistent"/>
+      <property name="PayloadType" value="TextMessage"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

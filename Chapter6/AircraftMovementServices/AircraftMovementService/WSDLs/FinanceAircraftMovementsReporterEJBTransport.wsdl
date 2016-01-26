@@ -1,0 +1,57 @@
+<?xml version='1.0'?>
+<WL5G3N0:definitions xmlns="" name="JwsService" targetNamespace="saibot.airport/finance/aircraftmovement" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="saibot.airport/finance/aircraftmovement" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:ns0="saibot.airport/finance/aircraftmovement" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:tns="saibot.airport/finance/aircraftmovement" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="saibot.airport/finance/aircraftmovement" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="saibot.airport/finance/aircraftmovement">
+      <xsd:complexType name="Exception">
+        <xsd:sequence>
+          <xsd:element name="message" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="reportAircraftMovemementReporter">
+        <xsd:sequence>
+          <xsd:element name="aircraftMovementReport" type="ns0:aircraftMovement" form="qualified"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="reportAircraftMovemementReporterResponse"/>
+      <xsd:complexType name="aircraftMovement">
+        <xsd:sequence>
+          <xsd:element name="flightNumber" type="xsd:int" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Exception" type="ns0:Exception"/>
+      <xsd:element name="reportAircraftMovemementReporter" type="ns0:reportAircraftMovemementReporter"/>
+      <xsd:element name="reportAircraftMovemementReporterResponse" type="ns0:reportAircraftMovemementReporterResponse"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="reportAircraftMovemementReporter">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:reportAircraftMovemementReporter"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="reportAircraftMovemementReporterResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:reportAircraftMovemementReporterResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="Exception">
+    <WL5G3N0:part name="fault" element="WL5G3N1:Exception"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="Jws">
+    <WL5G3N0:operation name="reportAircraftMovemementReporter">
+      <WL5G3N0:input message="WL5G3N1:reportAircraftMovemementReporter"/>
+      <WL5G3N0:output message="WL5G3N1:reportAircraftMovemementReporterResponse"/>
+      <WL5G3N0:fault name="Exception" message="WL5G3N1:Exception"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="JwsServiceSoapBinding" type="WL5G3N1:Jws">
+    <WL5G3N2:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <WL5G3N0:operation name="reportAircraftMovemementReporter">
+      <WL5G3N2:operation soapAction="saibot.airport/finance/aircraftmovement/reportAircraftMovemementReporter"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N2:fault name="Exception" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+</WL5G3N0:definitions>

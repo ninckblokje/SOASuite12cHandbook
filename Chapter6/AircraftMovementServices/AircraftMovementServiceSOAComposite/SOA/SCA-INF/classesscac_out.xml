@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Faults>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>Mediators/AircraftMovementMediator.mplan</file>
+      <name>Mediators/AircraftMovementMediator.mplan</name>
+      <fix/>
+      <msg>Assigning source "{saibot.airport/services/aircraftmovement}FlightNumber" and target "{http://finance.airport.saibot/}flightNumber" of different QName which may generate non-valid xml as per the xsd in case of non-leaf node. If required verify manually</msg>
+   </Fault>
+</Faults>
